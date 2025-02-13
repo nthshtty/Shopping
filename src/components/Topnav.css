@@ -1,0 +1,102 @@
+/* .header {
+  max-width: 100%;
+  box-shadow: 5px 5px 20px gray;
+  border: 1px solid red;
+}
+
+.brand {
+  color: white;
+  margin-left: 2%;
+  padding: 0.8em;
+  border: 1px solid blue;
+  width: 20%;
+}
+
+.inp-container input {
+  display: inline-block;
+  width: 90%;
+  height: 2.5em;
+}
+
+.row div {
+  display: inline-block;
+}
+.inp-container button {
+  width: 10%;
+  height: 2.5em;
+  border-radius: 8px;
+}
+
+.inp-container {
+  border-radius: 8px;
+} */
+
+.header {
+  max-width: 100%;
+  box-shadow: 5px 5px 20px gray;
+}
+
+.top-row div {
+  display: inline-block;
+}
+
+.brand {
+  color: white;
+  margin-left: 2%;
+  padding: 0.8em;
+  width: 23%;
+}
+
+.inp-container input {
+  display: inline-block;
+  width: 80%;
+  height: 2.5em;
+}
+.inp-container button {
+  width: 10%;
+  height: 2.5em;
+  border: none;
+  background-color: #dadada;
+}
+
+.dropdown {
+  width: 10%;
+}
+
+.select-btn {
+  height: 2.5em;
+  border: none;
+  background-color: #dadada;
+}
+
+.login-container a {
+  text-decoration: none;
+  color: white;
+}
+
+.login-container i,
+h5 {
+  display: inline-block;
+}
+
+.login-container {
+  color: white;
+  width: 15%;
+  text-align: right;
+}
+
+.user-icon {
+  font-size: 1.3em;
+  padding: 0.3em;
+  margin-right: 0.4em;
+}
+
+.cart-container {
+  color: white;
+  width: 8%;
+}
+
+.cart {
+  padding: 0.3em;
+  font-size: 1.3em;
+}

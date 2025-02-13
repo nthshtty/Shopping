@@ -1,0 +1,29 @@
+@import "../../style/sass/variable";
+@import "../../style/sass/mixins.scss";
+
+.sideNav-container {
+  margin: 1em;
+  box-shadow: 1px 0 14px 0 lightgrey;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  height: 40em;
+  border-radius: 1em;
+
+  .section-title {
+    padding: 1em;
+    text-align: center;
+  }
+
+  .indivitual-category {
+    .sub-item {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: black;
+        @include underline-transition(0.3);
+      }
+    }
+  }
+}
