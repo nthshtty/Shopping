@@ -1,0 +1,62 @@
+.product-details-container {
+  margin: auto;
+  padding: 1em;
+
+  .product-img-container {
+    text-align: right;
+    img {
+      height: 25em;
+      border-radius: 1em;
+    }
+  }
+
+  .product-name {
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+  .product-rating {
+    color: gold;
+  }
+
+  .product-info {
+    .product-price {
+      color: gray;
+      font-weight: 400;
+      font-size: 1.3em;
+      .price {
+        color: black;
+        font-weight: 500;
+        font-size: 1.8em;
+      }
+    }
+    .product-description {
+      font-size: 1.5em;
+      font-weight: 400;
+    }
+  }
+
+  .cart-container {
+    display: flex;
+    width: 25%;
+    height: 3em;
+    border-radius: 1em;
+    justify-content: space-evenly;
+    color: black;
+
+    .cart-icon-container {
+      margin-top: 0.5em;
+      padding: 0.2em;
+      i {
+        font-size: 1.2em;
+      }
+    }
+    .cart-text-container {
+      margin-top: 0.6em;
+      padding: 0.1em;
+      p {
+        font-weight: 700;
+        font-size: 1em;
+      }
+    }
+  }
+}

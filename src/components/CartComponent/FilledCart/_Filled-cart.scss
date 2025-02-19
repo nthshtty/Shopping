@@ -1,0 +1,39 @@
+.fc-main-div {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  .cart-item-div {
+    img {
+      height: 13em;
+      border-radius: 0.5em;
+    }
+    .cart-item-details {
+      text-align: left;
+      font-weight: 600;
+      .cart-item-name {
+        font-size: 1.4em;
+      }
+      .cart-item-price {
+        float: right;
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .cart-summary {
+    height: fit-content;
+    background-color: aliceblue;
+    border-radius: 2em;
+    text-align: start;
+
+    span {
+      display: block;
+      color: rgb(78, 78, 78);
+      margin: 1em 0;
+    }
+    .summary-total {
+      color: black;
+      font-weight: 500;
+    }
+  }
+}

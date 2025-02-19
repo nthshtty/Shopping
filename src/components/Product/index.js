@@ -1,38 +1,26 @@
+import { useDispatch, useSelector } from "react-redux";
 import "./_product.scss";
+import { useEffect } from "react";
+import getProduct from "../../Redux/productSlice/action";
+import { addItem } from "../../Redux/cartSlice";
+import { NavLink } from "react-router-dom";
 
 const Product = () => {
-  const productData = [
-    {
-      pName: "Jacket",
-      price: 45,
-      img: "shop-1.jpg",
-    },
-    {
-      pName: "Purse",
-      price: 50,
-      img: "shop-2.jpg",
-    },
-    {
-      pName: "Dress",
-      price: 38,
-      img: "shop-3.jpg",
-    },
-    {
-      pName: "Denim",
-      price: 42,
-      img: "shop-4.jpg",
-    },
-    {
-      pName: "Boots",
-      price: 65,
-      img: "shop-5.jpg",
-    },
-    {
-      pName: "Bag",
-      price: 35,
-      img: "shop-6.jpg",
-    },
-  ];
+  const productData = useSelector((state) => state.pr.product);
+  const cartData = useSelector((state) => state.cr);
+
+  const dispatch = useDispatch();
+
+  const handleCart = (item) => {
+    const payload = { ...item, quantity: 1 };
+    dispatch(addItem(payload));
+  };
+
+  console.log(cartData);
+
+  useEffect(() => {
+    dispatch(getProduct());
+  }, []);
 
   return (
     <div className="product-container">
@@ -40,11 +28,17 @@ const Product = () => {
         return (
           <div className="mx-4 p-3  product-card">
             <div className="product-image">
-              <img src={require(`../../assets/images/shop/${ele.img}`)} />
+              <NavLink to={"/details"} state={ele}>
+                <img
+                  src={require(`../../assets/images/shop/${ele.product_img}`)}
+                />
+              </NavLink>
             </div>
             <div className="product-info">
               <h5>
-                <a href="#">{ele.pName}</a>
+                <NavLink to={"/details"} state={ele}>
+                  {ele.product_name}
+                </NavLink>
               </h5>
               <p className="product-price">{ele.price}</p>
               <div className="product-rating">
@@ -53,6 +47,14 @@ const Product = () => {
                 <i className="fa fa-star"></i>
                 <i className="fa fa-star"></i>
                 <i className="fa fa-star"></i>
+              </div>
+              <div className="cart-button my-4" onClick={() => handleCart(ele)}>
+                <div className="cart-icon-container ">
+                  <i className="fa fa-shopping-cart"></i>
+                </div>
+                <div className="cart-text-container">
+                  <p>Add to the cart</p>
+                </div>
               </div>
             </div>
           </div>

@@ -92,11 +92,32 @@ h5 {
 }
 
 .cart-container {
+  width: 4%;
+  margin-left: 1.8em;
+}
+
+.cart-container i {
   color: white;
-  width: 8%;
 }
 
 .cart {
   padding: 0.3em;
   font-size: 1.3em;
+}
+
+.cart-counter {
+  border-radius: 50%;
+  background-color: gold;
+  color: black;
+  width: 1.8em;
+  height: 1.8em;
+
+  position: absolute;
+  left: 94.6%;
+  text-align: center;
+
+  p {
+    font-weight: 600;
+    font-size: 0.8em;
+  }
 }
